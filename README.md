@@ -1,29 +1,55 @@
-### 🇮🇩 **Pemrograman untuk Mahasiswa UT**
+### 🎓 **Belajar Pemrograman Web untuk Mahasiswa UT**
 
-Repository ini dibuat sebagai sumber belajar dan latihan pemrograman bagi mahasiswa **Universitas Terbuka (UT)**. Berisi contoh kode, tugas, dan proyek kecil yang mencakup berbagai topik dasar hingga menengah dalam pemrograman.
+Repository ini dibuat sebagai media belajar dan latihan pemrograman web bagi **mahasiswa Universitas Terbuka (UT)**. Berisi kumpulan contoh, tugas, dan proyek mini menggunakan **HTML**, **CSS**, **JavaScript**, dan **Vue.js**.
 
 #### 🎯 **Tujuan**
 
-* Membantu mahasiswa memahami konsep dasar pemrograman.
-* Memberikan contoh penerapan logika dan algoritma dalam berbagai bahasa pemrograman.
-* Menjadi referensi untuk tugas atau praktikum mata kuliah terkait pemrograman di UT.
+* Membantu mahasiswa memahami dasar-dasar pengembangan web modern.
+* Memberikan contoh nyata penggunaan HTML, CSS, dan JavaScript dalam membangun tampilan interaktif.
+* Mengenalkan framework **Vue.js** untuk membangun aplikasi web dinamis dan reaktif.
 
 #### 🧩 **Isi Repository**
 
-* 📘 **Dasar Pemrograman:** Variabel, tipe data, percabangan, perulangan
-* 💡 **Struktur Data & Algoritma:** Array, list, fungsi, rekursi
-* ⚙️ **Pemrograman Berorientasi Objek (OOP)**
-* 🌐 **Contoh Proyek Mini:** Aplikasi CLI sederhana, sistem CRUD, dan lain-lain
+* 📘 **HTML & CSS:** Struktur halaman, layout, dan styling responsif
+* ⚙️ **JavaScript Dasar:** DOM manipulation, event handling, dan logika interaktif
+* 🔷 **Vue.js:** Component, reactive data, dan routing sederhana
+* 🚀 **Proyek Mini:** To-Do App, Form Validasi, Dashboard Sederhana, dan lainnya
 
 #### 🛠️ **Teknologi yang Digunakan**
 
-* Python / Java / C++ (sesuai mata kuliah)
-* Git & GitHub untuk manajemen versi
+* HTML5
+* CSS3 (dengan Flexbox & Grid)
+* JavaScript (ES6+)
+* Vue.js 3
+
+#### 💡 **Cara Menjalankan**
+
+1. Clone repository ini
+
+   ```bash
+   git clone https://github.com/username/nama-repo.git
+   ```
+2. Masuk ke folder proyek vue
+
+   ```bash
+   cd vue-project
+   ```
+3. Buka file `index.html` di browser
+   atau jika menggunakan Vue CLI:
+
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 #### 👩‍💻 **Kontribusi**
 
-Mahasiswa UT dipersilakan untuk menambahkan contoh kode, memperbaiki dokumentasi, atau membuat *pull request* untuk berbagi pembelajaran bersama.
+Mahasiswa UT dipersilakan untuk menambahkan latihan baru, memperbaiki tampilan, atau mengembangkan fitur tambahan melalui *pull request*.
 
 #### 📚 **Lisensi**
 
-Proyek ini bersifat **open-source** dan dapat digunakan untuk tujuan pembelajaran.
+Proyek ini bersifat **open-source** dan dapat digunakan bebas untuk tujuan pembelajaran.
+
+---
+
+Apakah kamu mau saya tambahkan bagian **“struktur folder proyek”** juga (misalnya `/src`, `/components`, `/assets`, dsb) agar deskripsinya lebih lengkap untuk repo Vue.js?
