@@ -1,7 +1,3 @@
-Berikut contoh **deskripsi GitHub repository** yang bisa kamu pakai atau sesuaikan untuk proyek *pemrograman mahasiswa Universitas Terbuka (UT)*:
-
----
-
 ### 🇮🇩 **Pemrograman untuk Mahasiswa UT**
 
 Repository ini dibuat sebagai sumber belajar dan latihan pemrograman bagi mahasiswa **Universitas Terbuka (UT)**. Berisi contoh kode, tugas, dan proyek kecil yang mencakup berbagai topik dasar hingga menengah dalam pemrograman.
@@ -31,10 +27,3 @@ Mahasiswa UT dipersilakan untuk menambahkan contoh kode, memperbaiki dokumentasi
 #### 📚 **Lisensi**
 
 Proyek ini bersifat **open-source** dan dapat digunakan untuk tujuan pembelajaran.
-
----
-
-Apakah kamu ingin saya buatkan versi **lebih spesifik**, misalnya:
-
-* untuk **mata kuliah tertentu** (contoh: Pemrograman Web, Algoritma, Struktur Data), atau
-* fokus pada **bahasa pemrograman tertentu** (misalnya Python atau Java)?
