@@ -27,7 +27,7 @@ Repository ini dibuat sebagai media belajar dan latihan pemrograman web bagi **m
 1. Clone repository ini
 
    ```bash
-   git clone https://github.com/username/nama-repo.git
+   git clone https://github.com/armandowni/pemrograman-web.git
    ```
 2. Masuk ke folder proyek vue
 
@@ -49,7 +49,3 @@ Mahasiswa UT dipersilakan untuk menambahkan latihan baru, memperbaiki tampilan, 
 #### 📚 **Lisensi**
 
 Proyek ini bersifat **open-source** dan dapat digunakan bebas untuk tujuan pembelajaran.
-
----
-
-Apakah kamu mau saya tambahkan bagian **“struktur folder proyek”** juga (misalnya `/src`, `/components`, `/assets`, dsb) agar deskripsinya lebih lengkap untuk repo Vue.js?
