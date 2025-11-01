@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS dan JavaScript</title>
+    <link rel="stylesheet" href="web.css" />
+    <style>
+      /* responsive mobile */
+      @media (max-width: 600px) {
+        .container {
+          background-color: red;
+        }
+        .button {
+          background-color: green;
+        }
+        .info {
+          font-size: 10pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS dan JavaScript Demo</h1>
+
+      <div class="info">
+        <strong>Info:</strong> Klik tombol di bawah untuk melihat interaktivitas
+        JavaScript
+      </div>
+
+      <div class="input-group">
+        <label for="nama">Masukkan Nama:</label>
+        <input type="text" id="nama" placeholder="Nama Anda" />
+      </div>
+
+      <button class="button" onclick="greet()">Sapa Saya</button>
+      <button class="button" onclick="changeBackground()">
+        Ubah Warna Background
+      </button>
+
+      <div class="counter" style="width: 50px;">Counter: <span id="count">0</span></div>
+
+      <button class="button" onclick="increment()">Tambah</button>
+      <button class="button" onclick="decrement()">Kurang</button>
+      <button class="button" onclick="reset()">Reset</button>
+    </div>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
