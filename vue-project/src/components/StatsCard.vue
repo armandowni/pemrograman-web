@@ -57,7 +57,6 @@ export default {
   },
   // Setup function: Composition API entry point
   setup(props) {
-    console.log("test");
 
     // COMPUTED PROPERTY 1: Average Score
     // Sesi 7 Concept: Computed Properties

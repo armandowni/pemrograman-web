@@ -3,7 +3,7 @@
   <div class="card">
     <!-- Card title -->
     <h2>Tambah Siswa</h2>
-    
+
     <!-- Data Binding Demo Section -->
     <!-- Demonstrates Sesi 6: Data Binding concepts -->
     <div class="binding-demo">
@@ -11,70 +11,47 @@
         <strong>One-Way Binding (v-bind):</strong>
         <!-- :title is shorthand for v-bind:title -->
         <!-- One-way: Data flows from component to HTML attribute only -->
-        <input 
-          type="text" 
-          :placeholder="'Contoh: ' + localForm.name"
-          readonly
-          class="demo-input"
-        >
+        <input type="text" :placeholder="'Contoh: ' + localForm.name" readonly class="demo-input">
         <small>Placeholder berubah saat nama berubah (one-way)</small>
       </div>
-      
+
       <div class="demo-box">
         <strong>Dynamic Class Binding:</strong>
         <!-- :class binds CSS classes dynamically -->
         <!-- Demonstrates conditional class binding -->
-        <div 
-          :class="['demo-status', localForm.name ? 'filled' : 'empty']"
-        >
+        <div :class="['demo-status', localForm.name ? 'filled' : 'empty']">
           {{ localForm.name ? '✅ Ada nama' : '❌ Nama kosong' }}
         </div>
         <small>Class berubah berdasarkan kondisi</small>
       </div>
     </div>
-    
+
     <!-- Form Group 1: Student Name Input -->
     <!-- v-model.trim: Two-way binding with automatic whitespace trimming -->
     <div class="form-group">
       <label>Nama:</label>
-      <input 
-        v-model.trim="localForm.name" 
-        type="text" 
-        placeholder="Masukkan nama"
-      >
+      <input v-model.trim="localForm.name" type="text" placeholder="Masukkan nama">
     </div>
 
     <!-- Form Group 2: Student Email Input -->
     <!-- v-model: Two-way binding for email field -->
     <div class="form-group">
       <label>Email:</label>
-      <input 
-        v-model="localForm.email" 
-        type="email" 
-        placeholder="Masukkan email"
-      >
+      <input v-model="localForm.email" type="email" placeholder="Masukkan email">
     </div>
 
     <!-- Form Group 3: Student Score Input -->
     <!-- v-model.number: Two-way binding with automatic number conversion -->
     <div class="form-group">
       <label>Nilai:</label>
-      <input 
-        v-model.number="localForm.score" 
-        type="number" 
-        min="0" 
-        max="100"
-      >
+      <input v-model.number="localForm.score" type="number" min="0" max="100">
     </div>
 
     <!-- Form Group 4: Email Verification Checkbox -->
     <!-- v-model: Two-way binding for boolean checkbox -->
     <div class="checkbox-item">
       <label>
-        <input 
-          type="checkbox" 
-          v-model="localForm.verified"
-        >
+        <input type="checkbox" v-model="localForm.verified">
         Verifikasi Email
       </label>
     </div>
@@ -83,10 +60,7 @@
     <!-- @click: Event handler to emit 'add-student' event to parent -->
     <!-- :disabled: Dynamic attribute binding - button disabled if form invalid -->
     <!-- {{ }}: Conditional text based on isValid prop -->
-    <button 
-      @click="$emit('add-student')" 
-      :disabled="!isValid"
-    >
+    <button @click="$emit('add-student', localForm)" :disabled="!isValid">
       {{ isValid ? 'Tambah Siswa' : 'Isi Form Lengkap' }}
     </button>
   </div>
@@ -99,16 +73,16 @@ import { ref, watch } from 'vue'
 export default {
   // Component name for debugging and component registration
   name: 'FormCard',
-  
+
   // Props: Data passed from parent component
   props: {
     form: Object,        // Form data object from parent
     isValid: Boolean     // Form validation status from parent
   },
-  
+
   // Events: Emitted to parent component
   emits: ['add-student'],
-  
+
   // Setup function: Composition API entry point
   setup(props) {
     // Create reactive local copy of form data

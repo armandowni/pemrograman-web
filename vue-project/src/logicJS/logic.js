@@ -56,7 +56,12 @@ export default {
       },
     ]);
 
-    const newStudent = ref({ name: "", email: "", score: 0, verified: false });
+    const newStudent = ref({
+      name: "",
+      email: "",
+      score: 0,
+      verified: false,
+    });
     const searchQuery = ref("");
     const searchStatus = ref("");
     const selectedGrade = ref("all");
@@ -110,12 +115,7 @@ export default {
 
     // Computed Properties
     const isFormValid = computed(() => {
-      return (
-        newStudent.value.name.trim() !== "" &&
-        newStudent.value.email.includes("@") &&
-        newStudent.value.score >= 0 &&
-        newStudent.value.score <= 100
-      );
+      return newStudent.value.score == 0;
     });
 
     const filteredStudents = computed(() => {
@@ -171,22 +171,20 @@ export default {
       return "D";
     };
 
-    const addStudent = () => {
+    const addStudent = (student) => {
       if (!isFormValid.value) return;
+
       students.value.push({
         id: Date.now(),
-        name: newStudent.value.name,
-        email: newStudent.value.email,
-        score: newStudent.value.score,
-        verified: newStudent.value.verified,
+        ...student,
       });
-      showNotification(`${newStudent.value.name} ditambahkan!`, "success");
+      showNotification(`${student.name} ditambahkan!`, "success");
       newStudent.value = { name: "", email: "", score: 0, verified: false };
     };
 
     const deleteStudent = (id) => {
-      let student = students.value.find((s) => s.id === id);
-      students.value = students.value.filter((s) => s.id !== id);
+      const student = students.value.find((s) => s.id === id); //ambil student id
+      students.value = students.value.filter((s) => s.id !== student.id); //filter
       showNotification(`${student.name} dihapus!`, "warning");
     };
 
@@ -194,12 +192,13 @@ export default {
       editingStudent.value = { ...student };
     };
 
-    const saveEdit = () => {
+    const saveEdit = (params) => {
       let index = students.value.findIndex(
         (s) => s.id === editingStudent.value.id
       );
+
       if (index !== -1) {
-        students.value[index] = editingStudent.value;
+        students.value[index] = { ...editingStudent.value, ...params };
         showNotification(`${editingStudent.value.name} diperbarui!`, "success");
       }
       editingStudent.value = null;
@@ -231,8 +230,8 @@ export default {
 
     // Lifecycle
     const loadStudents = () => {
-      let stored = localStorage.getItem("students");
-      if (stored) students.value = JSON.parse(stored);
+      // Save initial data to localStorage on first load
+      localStorage.setItem("students", JSON.stringify(students.value));
     };
 
     loadStudents();
